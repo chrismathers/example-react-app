@@ -1,0 +1,117 @@
+// variables
+@body-color: black;
+@bg-color: #fcd0a9;
+@tab-panel-color: #b8b8b8;
+@tab-color: #eaeaea;
+@panel-color: white;
+@h2-color: #f4a142;
+
+@border-radius: 17px;
+@tab-radius: 10px;
+
+// mixins
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+// symantec tags
+body {
+  background-color: @bg-color;
+  color: @body-color;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input {
+  color: @h2-color;
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+svg {
+  min-width: 48px;
+}
+
+ul {
+  list-style: none;
+}
+
+// custom classes
+.c_tabsSwitcher {
+  min-width: 500px;
+  max-width: 40%;
+  margin: 0 auto;
+}
+
+.m_tablist {
+  .flex-row;
+  margin: 0;
+}
+.tablist__tab {
+  background-color: @tab-color;
+  border-top-left-radius: @tab-radius;
+  border-top-right-radius: @tab-radius;
+  padding: 8px 8px 5px 8px;
+  margin-left: 1px;
+  color: @h2-color;
+  font-weight: bold;
+}
+.tablist__tab--is-active {
+  background-color: @panel-color;
+}
+
+.c_tabpanels {
+  border-radius: @border-radius;
+  background-color: @panel-color;
+  margin: 0 auto;
+}
+
+.nav--is-hidden {
+  display: none;
+}
+
+.m_tabpanel {
+  .flex-row;
+  padding: 14px;
+  .m_tabpanel_text {
+    .flex-col;
+    margin-left: 12px;
+  }
+}
+
+// screen width minimum
+@media only screen
+and (max-width: 499px) {
+  .c_tabsSwitcher {
+    min-width: 210px;
+    max-width: none;
+    margin: 0 50px;
+  }
+
+  c_tabpanels {
+    .flex-col;
+    max-width: 75%;
+  }
+
+  .m_tablist {
+    display: none;
+  }
+  .m_tabpanel {
+    border-bottom: 1px solid @tab-panel-color;
+  }
+  .m_tabpanel:last-child {
+    border-bottom: none;
+  }
+}
