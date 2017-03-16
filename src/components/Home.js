@@ -1,6 +1,5 @@
 // @flow
 import React, {Component} from 'react'
-import cx from 'classnames'
 import axios from 'axios'
 import Tabs from '../components/Tabs.js'
 
