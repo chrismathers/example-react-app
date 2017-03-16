@@ -210,7 +210,7 @@ class Home extends Component {
     var _this = this;
     this.serverRequest =
       axios
-        .get("data/data.json")
+        .get("https://chrismathers.github.io/example-react-app/src/data/data.json")
         .then(function(result) {
           _this.setState({
             characters: result.data
