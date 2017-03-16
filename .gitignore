@@ -6,3 +6,9 @@ coverage
 gh-pages
 .nyc_output
 !/build/
+logs/*
+!.gitkeep
+tmp
+.DS_Store
+.idea/*
+.sass-cache/*
