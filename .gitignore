@@ -10,5 +10,5 @@ logs/*
 !.gitkeep
 tmp
 .DS_Store
-.idea/*
+.idea/
 .sass-cache/*
